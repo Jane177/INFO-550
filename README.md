@@ -1,12 +1,21 @@
 # INFO 550
 ## My project
 
-For my project, I will analyze the `ALL COVID vs MIS-C` data. 
+For my project, I will analyze  `ProjectA` data. 
 
-This project used WGCNA method to detect the differentially expressed genes between COVID and MIS-C patients. To analyze the data you will need to install some `R` packages. The required packages can be installed using `R` commands.
+This project used linear regression to test the relationship between CPC counts and obsetity. R packages used in this project were 'kableExtra','car','kableExtra' and 'knitr'. which can be installed using R commands.
+
+
 ``` r
-install.packages("BiocManager")
-BiocManager::install("WGCNA")
+installed_pkgs <- row.names(installed.packages())
+
+pkgs <- c("kableExtra","car","kableExtra", "knitr")
+
+for(p in pkgs){
+	if(!(p %in% installed_pkgs)){
+		install.packages(p)
+	}
+}
 ```
 
 ## Execute the analysis
@@ -14,8 +23,8 @@ BiocManager::install("WGCNA")
 To execute the analysis, from the project folder you can run 
 
 ``` bash
-Rscript -e "rmarkdown::render('INFO_550.Rmd')"
+Rscript -e "rmarkdown::render('INFO 555-HW2-YajieLiu.Rmd')"
 ```
 
-This will create a file called `INFO_550.html` output in your directory that contains the results.
+This will create a file called `INFO 555-HW2-YajieLiu.html` output in your directory that contains the results.
 
